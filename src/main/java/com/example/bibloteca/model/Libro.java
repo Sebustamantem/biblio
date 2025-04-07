@@ -1,7 +1,7 @@
 package com.example.bibloteca.model;
 
-import lombok.allArgsConstructor;
-import lombok.noArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Data;
 
 @Data
@@ -14,7 +14,8 @@ public class Libro {
     private String isbn;
     private String titulo;
     private String editorial;
+    private int fechapublica;
     private String autor;
-    private String fechapublicacion;
+    
 
 }
