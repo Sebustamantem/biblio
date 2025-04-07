@@ -56,4 +56,33 @@ public class LibroRepository {
             listaLibro.add(libro);
             return libro;
         }
-}
+
+        public Libro actualizarLibro(Libro libro){
+            int id = 0;
+            int idPosicion = 0;
+
+            for(int i = 0;i < listaLibro.size(); i++){
+                if(listaLibro.get(i).getId()== libro.getId()){
+                    id = libro.getId();
+                    idPosicion = i;
+                }
+            }
+
+            Libro libro1 = new Libro();
+            libro.setId(id);
+            libro.setIsbn(libro.getIsbn());
+            libro1.setTitulo(libro.getTitulo());
+            libro1.setEditorial(libro.getEditorial());
+            libro1.setFechapublica(libro.getFechapublica());
+            libro1.setAutor(libro.getAutor());
+
+
+            listaLibro.set(idPosicion,libro1);
+
+            return libro1;
+
+        }
+
+    }
+
+
