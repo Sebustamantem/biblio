@@ -22,7 +22,7 @@ public class LibroRepository {
 
     }
 
-    public List <Libro> geetLibros(){
+    public List <Libro> getLibros(){
         return listaLibro;
     }
 
@@ -44,7 +44,7 @@ public class LibroRepository {
         return null;
     }
 
-        public Libro getLibroPorautor (String autor){
+        public Libro getLibroPorAutor (String autor){
             for(Libro libro : listaLibro){
                 if(libro.getAutor()== autor)
                     return libro;
