@@ -102,15 +102,12 @@ public class LibroService {
       
     }
 
-    public List<Libro> listaLibrosOrdenadosPorAnio() {
-        
-
-        return LibroRepository.getLibro()
-        .stream()
-        .sorted((libro1, libro2) -> Integer.compare(libro1.getFechapublica(), libro2.getFechapublica()))
-        .toList();
-
-      }
-
+    public List<Libro> listarLibrosOrdenadosPorAnio() {
+      return libroRepository.getLibros()
+          .stream()
+          .sorted((libro1, libro2) -> Integer.compare(libro1.getFechapublica(), libro2.getFechapublica()))
+          .toList(); 
+  }
+  
 
 }
